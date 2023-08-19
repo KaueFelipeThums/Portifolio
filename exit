@@ -1,0 +1,8 @@
+user.email=kauethums99@gmail.com
+user.name=Kaue Thums
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/KaueFelipeThums/Portifolio.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
