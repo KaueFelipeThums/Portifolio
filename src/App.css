@@ -1,0 +1,173 @@
+:root {
+  --yellow: #fcbf47;
+  --background-1: #252525;
+  --background-2: #323232;
+
+  --gray-light: #c9c9c9;
+  --white: #ffffff;
+
+  --font-small: 18px; /* SMALL */
+  --font-5: 22px; /* SMALL */
+  --font-4: 32px; /* MIDDLE */
+  --font-3: 42px; /* BIG */
+  --font-2: 52px; /* VERY BIG */
+  --font-1: 72px; /* TITLE */
+
+  --bold: 900;
+  --semi-bold: 500;
+  --normal: 300;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+  background-color: #858585;
+}
+
+body::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(75, 75, 75, 0.3);
+  background-color: #5e5e5e;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.section-content {
+  width: 100%;
+  max-width: 1280px;
+  padding-inline: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.background-1 {
+  background-color: var(--background-1);
+}
+
+.background-2 {
+  background-color: var(--background-2);
+}
+
+.background-yellow {
+  background-color: var(--yellow);
+}
+
+.background-gray {
+  background-color: var(--gray-light);
+}
+
+/* TITLE */
+.font-small {
+  font-size: var(--font-small);
+  font-weight: var(--bold);
+  line-height: 130%;
+}
+
+/* TITLE */
+.font-h1 {
+  font-size: var(--font-1);
+  font-weight: var(--bold);
+  line-height: 130%;
+}
+
+.font-h2 {
+  font-size: var(--font-2);
+  font-weight: var(--bold);
+  line-height: 130%;
+}
+
+.font-h3 {
+  font-size: var(--font-3);
+  font-weight: var(--bold);
+  line-height: 130%;
+}
+
+.font-h4 {
+  font-size: var(--font-4);
+  font-weight: var(--bold);
+  line-height: 130%;
+}
+
+.font-h5 {
+  font-size: var(--font-5);
+  font-weight: var(--bold);
+  line-height: 130%;
+}
+
+/* TEXT */
+.font-body-small {
+  font-size: var(--font-small);
+  font-weight: var(--normal);
+  line-height: 130%;
+}
+
+.font-body1 {
+  font-size: var(--font-1);
+  font-weight: var(--normal);
+  line-height: 130%;
+}
+
+.font-body2 {
+  font-size: var(--font-2);
+  font-weight: var(--normal);
+  line-height: 130%;
+}
+
+.font-body3 {
+  font-size: var(--font-3);
+  font-weight: var(--normal);
+  line-height: 130%;
+}
+
+.font-body4 {
+  font-size: var(--font-4);
+  font-weight: var(--normal);
+  line-height: 130%;
+}
+
+.font-body5 {
+  font-size: var(--font-5);
+  font-weight: var(--normal);
+  line-height: 130%;
+}
+
+.white-text {
+  color: var(--white);
+}
+
+.gray-text {
+  color: var(--background-1);
+}
+
+.primary-text {
+  color: var(--yellow);
+}
+
+.semi-bold {
+  font-weight: var(--semi-bold);
+}
+
+.bold {
+  font-weight: var(--bold);
+}
+
+.vertical-center {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-center {
+  text-align: center;
+}
