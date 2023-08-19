@@ -37,7 +37,7 @@ export const Home = (): ReactElement => {
               </div>
             </div>
             <div className="col-span-12 md:col-span-6 lg:col-span-6 resume-description-container">
-              <img src={require("../../assets/images/perfil.jpeg")} />
+              <img alt="Perfil" src={require("../../assets/images/perfil.jpeg")} />
             </div>
           </div>
         </div>
