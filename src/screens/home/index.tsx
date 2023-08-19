@@ -71,7 +71,7 @@ export const Home = (): ReactElement => {
                     </p>
                   </div>
                   <div className="col-span-3 md:col-span-3 lg:col-start-4 lg:col-end-5">
-                    <p className="font-h1 primary-text">15+</p>
+                    <p className="font-h1 primary-text">20+</p>
                     <p className="font-body5 white-text">
                       Projetos <br /> Concluídos
                     </p>
