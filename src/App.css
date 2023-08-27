@@ -6,7 +6,7 @@
   --gray-light: #c9c9c9;
   --white: #ffffff;
 
-  --font-small: 18px; /* SMALL */
+  --title-small: 18px; /* SMALL */
   --font-5: 22px; /* SMALL */
   --font-4: 32px; /* MIDDLE */
   --font-3: 42px; /* BIG */
@@ -36,6 +36,9 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.screen-height {
   min-height: 100vh;
 }
 
@@ -64,9 +67,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* TITLE */
-.font-small {
-  font-size: var(--font-small);
+.title-small {
+  font-size: var(--title-small);
   font-weight: var(--bold);
+  line-height: 130%;
+}
+
+.text-small {
+  font-size: var(--title-small);
+  font-weight: var(--normal);
   line-height: 130%;
 }
 
@@ -103,7 +112,7 @@ body::-webkit-scrollbar-thumb {
 
 /* TEXT */
 .font-body-small {
-  font-size: var(--font-small);
+  font-size: var(--title-small);
   font-weight: var(--normal);
   line-height: 130%;
 }
@@ -170,4 +179,23 @@ body::-webkit-scrollbar-thumb {
 
 .text-center {
   text-align: center;
+}
+
+/* Animations */
+@keyframes zoom-in {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes zoom-out {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

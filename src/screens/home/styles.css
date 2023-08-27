@@ -64,6 +64,155 @@
   display: flex;
   flex-direction: column;
   justify-content: end;
-  min-height: 350px;
+  min-height: 400px;
   gap: 10px;
+}
+
+.cards-container {
+  background: linear-gradient(
+    to bottom,
+    var(--background-2) 0%,
+    var(--background-2) 50%,
+    var(--background-1) 50%,
+    var(--background-1) 100%
+  );
+}
+
+/* FORMATION */
+.formation-description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.formation-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.image-formation {
+  width: 500px;
+  max-width: 100%;
+  opacity: 0.4;
+}
+
+.container-table {
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-table-row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  border-bottom: 1px solid #656565;
+  padding: 10px;
+}
+
+.flex-table-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.flex-table-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-table-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  color: var(--gray-light);
+}
+
+/* EXPERIENCE */
+.experience-description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.stack-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.stack-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stack-item-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.stack-item-percent {
+  background-color: var(--background-1);
+  width: 100%;
+  height: 8px;
+}
+
+.stack-item-percent-value {
+  background-color: var(--yellow);
+  height: 100%;
+}
+
+.stacks-list-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.stacks-list-item {
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.stacks-list-item-icon {
+  fill: var(--gray-light);
+  width: 70px;
+  height: 70px;
+  transition: transform 350ms;
+}
+
+.stacks-list-item-icon:hover {
+  fill: var(--yellow);
+  transform: translateY(-10px);
+  width: 70px;
+}
+
+.stacks-list-item-title {
+  color: var(--gray-light);
+  text-align: center;
+  transition: opacity 400ms ease;
+  opacity: 0;
+}
+
+.stacks-list-item-icon:hover + .stacks-list-item-title {
+  opacity: 1;
 }
