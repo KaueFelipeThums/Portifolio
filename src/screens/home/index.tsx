@@ -1,5 +1,5 @@
 import "./styles.css";
-import React, { ReactElement } from "react";
+import React, { ReactElement, useState } from "react";
 import { NavigationBar } from "../../components/navigationBar";
 import {
   InstagramLogo,
@@ -9,6 +9,8 @@ import {
   Terminal,
   DeviceMobileCamera,
   GraduationCap,
+  EnvelopeSimple,
+  Copy,
 } from "@phosphor-icons/react";
 import { ReactComponent as JavaScript } from "../../assets/images/javascript.svg";
 import { ReactComponent as TypeScript } from "../../assets/images/typescript.svg";
@@ -25,10 +27,12 @@ import { ReactComponent as Figma } from "../../assets/images/figma.svg";
 import { ReactComponent as VScode } from "../../assets/images/vscode.svg";
 
 export const Home = (): ReactElement => {
+  const [showIconCopy, setShowIconCopy] = useState<boolean>(false);
+
   const formation = [
     {
       description: "Curso Técnico em Desenvolvimento de Sistemas",
-      date: "Jan 2021",
+      date: "Jul 2021",
     },
     {
       description: "Engenharia de Software",
@@ -113,6 +117,41 @@ export const Home = (): ReactElement => {
       src: <VScode />,
     },
   ];
+
+  const contacts = [
+    {
+      iconBefore: <EnvelopeSimple />,
+      iconAfter: <Copy />,
+      description: "kauethums99@gmail.com",
+      onclick: () => {
+        copyTextToClipboard("kauethums99@gmail.com");
+        toggleIconAfter();
+      },
+    },
+    {
+      iconBefore: <InstagramLogo />,
+      description: "Instagram",
+    },
+    {
+      iconBefore: <LinkedinLogo />,
+      description: "Linkedin",
+    },
+    {
+      iconBefore: <GithubLogo />,
+      description: "GitHub",
+    },
+  ];
+
+  const copyTextToClipboard = async (text: string) => {
+    if ("clipboard" in navigator) {
+      return await navigator.clipboard.writeText(text);
+    }
+  };
+
+  const toggleIconAfter = () => {
+    setShowIconCopy(true);
+    setTimeout(() => setShowIconCopy(false), 1000);
+  };
 
   return (
     <div>
@@ -283,7 +322,7 @@ export const Home = (): ReactElement => {
               </div>
             </div>
 
-            <div className="col-span-12 md:col-span-6 lg:col-span-6 formation-description-container">
+            <div className="col-span-12 md:col-span-6 lg:col-span-6 experience-description-container">
               <div className="stack-container">
                 {experience?.map((e) => {
                   return (
@@ -311,6 +350,57 @@ export const Home = (): ReactElement => {
                     </div>
                   );
                 })}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section background-1 screen-height" id="contact">
+        <div className="section-content">
+          <div className="grid grid-cols-12 gap-4 resume-grid">
+            <div className="col-span-12 md:col-span-6 lg:col-span-6 contact-description-container">
+              <img alt="Perfil" src={require("../../assets/images/perfil.jpeg")} />
+            </div>
+
+            <div className="col-span-12 md:col-span-6 lg:col-span-6 contact-description-container">
+              <div className="description-content">
+                <span className="title-small white-text subtitle">Contato</span>
+              </div>
+              <div className="description-content">
+                <span className="font-body5 white-text">
+                  Vamos trabalhar juntos para transformar suas ideias em incríveis aplicativos web e mobile! Conecte-se
+                  comigo através das redes sociais abaixo e vamos começar a criar algo surpreendente!
+                </span>
+              </div>
+
+              <div className="contacts-content">
+                {contacts?.map((e) => {
+                  return (
+                    <div className="contacts-item" onClick={e?.onclick}>
+                      <div className="contacts-item-before" />
+                      <div className="contacts-item-content">
+                        <span className="font-body4">{e?.iconBefore}</span>
+                        <span className="contacts-description font-h5">{e?.description}</span>
+                        {e?.iconAfter && (
+                          <span className={`contacts-icon-after font-body4 ${showIconCopy ? "show" : ""}`}>
+                            {e?.iconAfter}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section background-2">
+        <div className="section-content">
+          <div className="grid grid-cols-12 gap-4 resume-grid">
+            <div className="col-span-12">
+              <div className="description-footer-content">
+                <span className="text-small white-text">© Copyright 2023 Kaue Thums</span>
               </div>
             </div>
           </div>

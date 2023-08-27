@@ -83,7 +83,7 @@
   top: 0;
   opacity: 0;
   right: -100%;
-  transition: right 0.5s cubic-bezier(0.82, 0.085, 0.395, 0.895), opacity 0.7s;
+  transition: right 0.5s cubic-bezier(0.82, 0.085, 0.395, 0.895), opacity 0.5s;
 }
 
 .overlay-body {
