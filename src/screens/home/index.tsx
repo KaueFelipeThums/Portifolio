@@ -1,5 +1,5 @@
 import "./styles.css";
-import React, { ReactElement, useState } from "react";
+import { ReactElement, useState } from "react";
 import { NavigationBar } from "../../components/navigationBar";
 import {
   InstagramLogo,
@@ -65,55 +65,55 @@ export const Home = (): ReactElement => {
 
   const stacks = [
     {
-      title: "Java Script",
+      description: "Java Script",
       src: <JavaScript />,
     },
     {
-      title: "Type Script",
+      description: "Type Script",
       src: <TypeScript />,
     },
     {
-      title: "React",
+      description: "React",
       src: <ReactLogo />,
     },
     {
-      title: "PHP",
+      description: "PHP",
       src: <PHP />,
     },
     {
-      title: "Laravel",
+      description: "Laravel",
       src: <Laravel />,
     },
     {
-      title: "HTML",
+      description: "HTML",
       src: <Html />,
     },
     {
-      title: "CSS",
+      description: "CSS",
       src: <Css />,
     },
     {
-      title: "Git",
+      description: "Git",
       src: <Git />,
     },
     {
-      title: "MySQL",
+      description: "MySQL",
       src: <MySql />,
     },
     {
-      title: "SqLite",
+      description: "SqLite",
       src: <SqLite />,
     },
     {
-      title: "Ubuntu",
+      description: "Ubuntu",
       src: <Ubuntu />,
     },
     {
-      title: "Figma",
+      description: "Figma",
       src: <Figma />,
     },
     {
-      title: "VS Code",
+      description: "VS Code",
       src: <VScode />,
     },
   ];
@@ -131,14 +131,23 @@ export const Home = (): ReactElement => {
     {
       iconBefore: <InstagramLogo />,
       description: "Instagram",
+      onclick: () => {
+        window.open("https://www.instagram.com/kauethums/");
+      },
     },
     {
       iconBefore: <LinkedinLogo />,
       description: "Linkedin",
+      onclick: () => {
+        window.open("https://www.linkedin.com/in/kaue-thums-927b331a2/");
+      },
     },
     {
       iconBefore: <GithubLogo />,
       description: "GitHub",
+      onclick: () => {
+        window.open("https://github.com/KaueFelipeThums");
+      },
     },
   ];
 
@@ -173,13 +182,19 @@ export const Home = (): ReactElement => {
               </div>
               <div className="resume-description-content">
                 <div className="resume-description-social-container">
-                  <span className="font-body3 resume-description-social">
+                  <span
+                    className="font-body3 resume-description-social"
+                    onClick={() => window.open("https://www.instagram.com/kauethums/")}>
                     <InstagramLogo />
                   </span>
-                  <span className="font-body3 resume-description-social">
+                  <span
+                    className="font-body3 resume-description-social"
+                    onClick={() => window.open("https://www.linkedin.com/in/kaue-thums-927b331a2/")}>
                     <LinkedinLogo />
                   </span>
-                  <span className="font-body3 resume-description-social">
+                  <span
+                    className="font-body3 resume-description-social"
+                    onClick={() => window.open("https://github.com/KaueFelipeThums")}>
                     <GithubLogo />
                   </span>
                 </div>
@@ -346,7 +361,7 @@ export const Home = (): ReactElement => {
                   return (
                     <div className="stacks-list-item">
                       <svg className="stacks-list-item-icon">{e?.src}</svg>
-                      <p className="stacks-list-item-title text-small">{e?.title}</p>
+                      <p className="stacks-list-item-title text-small">{e?.description}</p>
                     </div>
                   );
                 })}
