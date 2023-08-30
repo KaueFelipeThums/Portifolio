@@ -170,7 +170,7 @@ export const Home = (): ReactElement => {
           <div className="grid grid-cols-12 gap-4 resume-grid">
             <div className="col-span-12 md:col-span-6 lg:col-span-6 resume-description-container">
               <div className="resume-description-content">
-                <span className="font-h1 white-text">Kaue Thums</span>
+                <div className="font-h1 white-text typewriter">Kaue Thums</div>
                 <div className="description-name-line" />
               </div>
               <div className="resume-description-content">
